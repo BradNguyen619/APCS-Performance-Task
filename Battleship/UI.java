@@ -1,3 +1,4 @@
+//Code started off as a TicTacToe game
 package Battleship;
 import java.util.Scanner;
 import java.util.InputMismatchException;
@@ -97,7 +98,7 @@ public class UI
     public void printBoard(State state) {
         System.out.println(Constants.DIVIDER_STRING);
         for (int row = 0; row < Constants.BOARD_SIZE; row++) {
-            System.out.printf(Constants.BOARD_STRING, getXOrO(state.getBoardCell(row, 0)), getXOrO(state.getBoardCell(row, 1)), getXOrO(state.getBoardCell(row, 2)));
+            System.out.printf(Constants.BOARD_STRING, getXOrO(state.getBoardCell(row, 0)), getXOrO(state.getBoardCell(row, 1)), getXOrO(state.getBoardCell(row, 2)), getXOrO(state.getBoardCell(row, 3)), getXOrO(state.getBoardCell(row, 4)), getXOrO(state.getBoardCell(row, 5)), getXOrO(state.getBoardCell(row, 6)), getXOrO(state.getBoardCell(row, 7)), getXOrO(state.getBoardCell(row, 8)), getXOrO(state.getBoardCell(row, 9)));
             System.out.println();
             System.out.println(Constants.DIVIDER_STRING);
         }

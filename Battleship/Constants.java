@@ -1,3 +1,4 @@
+//Code started off as a TicTacToe game
 package Battleship;
 
 /**
@@ -7,7 +8,7 @@ package Battleship;
 public class Constants
 {
     // Valid board size
-    public static final int BOARD_SIZE = 3;
+    public static final int BOARD_SIZE = 10;
 
     // Valid board values
     public static final int X = -1;    // Indicates an "X"
@@ -29,8 +30,8 @@ public class Constants
     public static final int QUIT_PROGRAM = 11;
     
     // Strings
-    public static final String DIVIDER_STRING = "|--|--|--|--|--|--|--|--|--|--|";
-    public static final String BOARD_STRING = "| %s | %s | %s |";
+    public static final String DIVIDER_STRING = "|---|---|---|---|---|---|---|---|---|---|";
+    public static final String BOARD_STRING = "| %s | %s | %s | %s | %s | %s | %s | %s | %s | %s |";
     public static final String GET_PLAYER_NAME = "Player %s: What is your name? -->";
     public static final String TITLE = "Thanks for playing Battleship!";
     public static final String GET_ROW_MOVE = "Player %s (%s): Enter the row for your next move -->";
