@@ -64,6 +64,25 @@ public class UI
             }
         }
     }
+    
+    public int rowGravity(int whoseMove, String xName, String oName) {
+        int row = 0;
+        while (true) {
+            try {
+                row = 7;
+                if (row == Constants.X || row == Constants.O) {
+                    row--;
+                }
+                else {
+                    return row;
+                }
+            } catch (InputMismatchException error) {
+                printInvalidRowOrColumn();
+                System.out.println();
+                scanner.nextLine();
+            }
+        }
+    }
 
     public boolean startNewGame() {
         System.out.println(Constants.START_NEW_GAME);

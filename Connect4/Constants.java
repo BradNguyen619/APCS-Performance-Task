@@ -36,7 +36,8 @@ public class Constants
     public static final String GET_PLAYER_NAME = "Player %s: What is your name? -->";
     public static final String TITLE = "Thank you for playing Connect 4!";
     public static final String GET_COL_MOVE = "Player %s (%s): Enter the column for your next move -->";
-    public static final String INVALID_ROW_OR_COLUMN = "Your row and column must be 1 to 7";
+    public static final String INVALID_ROW_OR_COLUMN = "The column must be 1 to 7";
+    public static final String FULL_COLLUMN = "This column is already full, please choose another column";
     public static final String INVALID_MOVE_ERROR = "Row %d column %d is not a valid move. Please try again";
     public static final String PRINT_MOVE = "Player %s (%s) move to %d %d";
     public static final String WINNER = "%s - %s is the winner!";
