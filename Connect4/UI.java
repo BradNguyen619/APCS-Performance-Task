@@ -43,26 +43,6 @@ public class UI
         return scanner.next();
     }
 
-    public int getMoveRow(int whoseMove, String xName, String oName) {
-        int row = 0;
-        while (true) {
-            System.out.printf(Constants.GET_ROW_MOVE, getXOrO(whoseMove), getPlayerName(whoseMove,xName, oName));
-            try {
-                row = scanner.nextInt();
-                if (row < 1 || row > Constants.BOARD_SIZE) {
-                    printInvalidRowOrColumn();
-                    System.out.println();
-                    scanner.nextLine();
-                } else{
-                    return row;
-                }
-            } catch (InputMismatchException error) {
-                printInvalidRowOrColumn();
-                System.out.println();
-            }
-        }
-    }
-
     public int getMoveCol(int whoseMove, String xName, String oName) {
         int col = 0;
         while (true) {
