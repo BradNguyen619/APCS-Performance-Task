@@ -73,7 +73,7 @@ public class UI
                 if (row == Constants.X || row == Constants.O) {
                     while (true) {
                         row-= 1;
-                    }
+                    } 
                     
                 }
                 else {
