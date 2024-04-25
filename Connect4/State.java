@@ -79,5 +79,13 @@ public class State
     public void setBoardCell(int row, int col, int value) {
         this.board[row][col] = value;
     }
-
+    
+    // Taken from Relias https://stackoverflow.com/questions/76425040/how-can-i-verify-if-a-cell-is-occupied-in-java
+    boolean isValidMove(int row, int col) { 
+        if (board[row][col] == null) {
+            return true;
+        } else {
+            return false; 
+        }
+    }
 }

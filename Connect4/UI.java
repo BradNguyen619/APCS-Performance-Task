@@ -71,7 +71,10 @@ public class UI
             try {
                 row = 7;
                 if (row == Constants.X || row == Constants.O) {
-                    row--;
+                    while (true) {
+                        row-= 1;
+                    }
+                    
                 }
                 else {
                     return row;
