@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=UI
-comment0.text=\n\ UI\ class\n
+comment0.text=\r\n\ UI\ class\r\n
 comment1.params=
 comment1.target=UI()
 comment10.params=state
@@ -23,10 +23,10 @@ comment4.params=state\ row\ col
 comment4.target=boolean\ isLegalMove(State,\ int,\ int)
 comment5.params=player
 comment5.target=java.lang.String\ promptForName(java.lang.String)
-comment6.params=whoseMove\ xName\ oName
-comment6.target=int\ getMoveCol(int,\ java.lang.String,\ java.lang.String)
-comment7.params=whoseMove\ xName\ oName
-comment7.target=int\ rowGravity(int,\ java.lang.String,\ java.lang.String)
+comment6.params=whoseMove\ xName\ oName\ state
+comment6.target=int\ getMoveCol(int,\ java.lang.String,\ java.lang.String,\ State)
+comment7.params=whoseMove\ xName\ oName\ state
+comment7.target=int\ row(int,\ java.lang.String,\ java.lang.String,\ State)
 comment8.params=
 comment8.target=boolean\ startNewGame()
 comment9.params=

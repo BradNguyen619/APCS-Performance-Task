@@ -15,15 +15,39 @@ public class State
     public boolean isWinner() {
         int total;
         for (int row=0; row<Constants.BOARD_SIZE; row++) {
-            total = getBoardCell(row, 0) + getBoardCell(row,1) + getBoardCell(row,2);
-            if (total == -3 || total == 3) return true;
+            total = getBoardCell(row, 0) + getBoardCell(row,1) + getBoardCell(row,2) + getBoardCell(row,3);
+            if (total == -4 || total == 4) return true;
+        }
+        for (int row=0; row<Constants.BOARD_SIZE; row++) {
+            total = getBoardCell(row, 1) + getBoardCell(row,2) + getBoardCell(row,3) + getBoardCell(row,4);
+            if (total == -4 || total == 4) return true;
+        }
+        for (int row=0; row<Constants.BOARD_SIZE; row++) {
+            total = getBoardCell(row, 2) + getBoardCell(row,3) + getBoardCell(row,4) + getBoardCell(row,5);
+            if (total == -4 || total == 4) return true;
+        }
+        for (int row=0; row<Constants.BOARD_SIZE; row++) {
+            total = getBoardCell(row, 3) + getBoardCell(row,4) + getBoardCell(row,5) + getBoardCell(row,6);
+            if (total == -4 || total == 4) return true;
         }
         for (int col=0; col<Constants.BOARD_SIZE; col++) {
-            total = getBoardCell(0, col) + getBoardCell(1,col) + getBoardCell(2, col);
-            if (total == -3 || total == 3) return true;
+            total = getBoardCell(0, col) + getBoardCell(1,col) + getBoardCell(2, col) + getBoardCell(3,col);
+            if (total == -4 || total == 4) return true;
         }
-        total = getBoardCell(0, 0) + getBoardCell(1,1) + getBoardCell(2, 2);
-        if (total == -3 || total == 3) return true;
+        for (int col=0; col<Constants.BOARD_SIZE; col++) {
+            total = getBoardCell(1, col) + getBoardCell(2,col) + getBoardCell(3, col) + getBoardCell(4,col);
+            if (total == -4 || total == 4) return true;
+        }
+        for (int col=0; col<Constants.BOARD_SIZE; col++) {
+            total = getBoardCell(2, col) + getBoardCell(3,col) + getBoardCell(4, col) + getBoardCell(5,col);
+            if (total == -4 || total == 4) return true;
+        }
+        for (int col=0; col<Constants.BOARD_SIZE; col++) {
+            total = getBoardCell(3, col) + getBoardCell(4,col) + getBoardCell(5, col) + getBoardCell(6,col);
+            if (total == -4 || total == 4) return true;
+        }
+        total = getBoardCell(0, 0) + getBoardCell(1,1) + getBoardCell(2, 2) + getBoardCell(3,3);
+        if (total == -4 || total == 4) return true;
         total = getBoardCell(2, 0) + getBoardCell(1,1) + getBoardCell(0, 2);
         if (total == -3 || total == 3) return true;
         return false;

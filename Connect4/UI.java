@@ -15,8 +15,8 @@ public class UI
     public UI() {
         scanner = new Scanner(System.in);         
     }
-    
-     // Utility methods
+
+    // Utility methods
     public String getXOrO(int whoseMove) {
         if (whoseMove == -1) {
             return "X";
@@ -43,8 +43,9 @@ public class UI
         return scanner.next();
     }
 
-    public int getMoveCol(int whoseMove, String xName, String oName) {
+    public int getMoveCol(int whoseMove, String xName, String oName, State state) {
         int col = 0;
+        int row = 6;
         while (true) {
             System.out.printf(Constants.GET_COL_MOVE, getXOrO(whoseMove), getPlayerName(whoseMove, xName, oName));
             try {
@@ -64,26 +65,26 @@ public class UI
             }
         }
     }
-    
-    public int rowGravity(int whoseMove, String xName, String oName) {
-        int row = 0;
+
+    public int row(int whoseMove, String xName, String oName, State state) {
+        getMoveCol (state.getWhoseMove(), state.getXName(), state.getOName(), state); 
+        int row = 7;
+        int col = 0; 
         while (true) {
+            System.out.printf(Constants.GET_COL_MOVE, getXOrO(whoseMove), getPlayerName(whoseMove, xName, oName));
             try {
-                row = 7;
-                if (row == Constants.X || row == Constants.O) {
-                    while (true) {
-                        row-= 1;
-                    } 
-                    
+                col = scanner.nextInt();
+                while (state.getBoardCell(row,col) != Constants.BLANK) {
+                row --; 
                 }
-                else {
-                    return row;
+                if (state.getBoardCell(row, col) == Constants.BLANK)  {
+                return row;
                 }
             } catch (InputMismatchException error) {
                 printInvalidRowOrColumn();
                 System.out.println();
                 scanner.nextLine();
-            }
+                }
         }
     }
 

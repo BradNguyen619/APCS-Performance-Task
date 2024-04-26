@@ -33,16 +33,22 @@ public class EventLoop {
     
       } else if (gameState == Constants.GET_X_MOVE) {
         ui.printBoard(state);
-        col = ui.getMoveCol(state.getWhoseMove(), state.getXName(), state.getOName());
-        row = ui.rowGravity(state.getWhoseMove(), state.getXName(), state.getOName());
+        col = ui.getMoveCol(state.getWhoseMove(), state.getXName(), state.getOName(), state);
+        row = 7;
+        while (state.getBoardCell(row-1,col-1) != Constants.BLANK) {
+                row --; 
+        }
         if (ui.isLegalMove(state, row, col)) {
           state.setGameState(Constants.MAKE_MOVE);
         } 
 
       } else if (gameState == Constants.GET_O_MOVE) {
         ui.printBoard(state);
-        col = ui.getMoveCol(state.getWhoseMove(), state.getXName(), state.getOName());
-        row = ui.rowGravity(state.getWhoseMove(), state.getXName(), state.getOName());
+        col = ui.getMoveCol(state.getWhoseMove(), state.getXName(), state.getOName(), state);
+        row = 7;
+        while (state.getBoardCell(row-1,col-1) != Constants.BLANK) {
+                row --; 
+        }
         if (ui.isLegalMove(state, row, col)) {
           state.setGameState(Constants.MAKE_MOVE);
         } 
