@@ -1,5 +1,5 @@
 
-//Code started off as a TicTacToe game
+//Code started off as a TicTacToe game from my teacher
 package Connect4;
 
 /**

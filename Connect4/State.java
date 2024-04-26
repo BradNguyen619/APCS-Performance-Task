@@ -1,6 +1,5 @@
-
+//Code started off as a TicTacToe game from my teacher
 package Connect4;
-//Code started off as a TicTacToe game
 /**
  * Tic-Tac-Toe state variables.
  */
@@ -46,10 +45,32 @@ public class State
             total = getBoardCell(3, col) + getBoardCell(4,col) + getBoardCell(5, col) + getBoardCell(6,col);
             if (total == -4 || total == 4) return true;
         }
-        total = getBoardCell(0, 0) + getBoardCell(1,1) + getBoardCell(2, 2) + getBoardCell(3,3);
+        for (int col=0; col<Constants.BOARD_SIZE;) {
+            for (int row=0; col<Constants.BOARD_SIZE;) {
+                while (row<=Constants.BOARD_SIZE && col<=Constants.BOARD_SIZE) {
+                    
+                }
+            }
+        }
+        total = getBoardCell(0, 0) + getBoardCell(1,1) + getBoardCell(2,2) + getBoardCell(3,3);
         if (total == -4 || total == 4) return true;
-        total = getBoardCell(2, 0) + getBoardCell(1,1) + getBoardCell(0, 2);
-        if (total == -3 || total == 3) return true;
+        total = getBoardCell(1, 1) + getBoardCell(2,2) + getBoardCell(3,3) + getBoardCell(4,4);
+        if (total == -4 || total == 4) return true;
+        total = getBoardCell(2, 2) + getBoardCell(3,3) + getBoardCell(4,4) + getBoardCell(5,5);
+        if (total == -4 || total == 4) return true;
+        total = getBoardCell(3, 3) + getBoardCell(4,4) + getBoardCell(5,5) + getBoardCell(6,6);
+        if (total == -4 || total == 4) return true;
+        total = getBoardCell(0 , 1) + getBoardCell(1,2) + getBoardCell(2,3) + getBoardCell(3,4);
+        if (total == -4 || total == 4) return true;
+        total = getBoardCell(1, 2) + getBoardCell(2,3) + getBoardCell(3,4) + getBoardCell(4,5);
+        if (total == -4 || total == 4) return true;
+        total = getBoardCell(2, 3) + getBoardCell(3,4) + getBoardCell(4,5) + getBoardCell(5,6);
+        if (total == -4 || total == 4) return true;
+        total = getBoardCell(0, 2) + getBoardCell(1,3) + getBoardCell(2,4) + getBoardCell(3,5);
+        if (total == -4 || total == 4) return true;
+        total = getBoardCell(1, 3) + getBoardCell(2,4) + getBoardCell(3,5) + getBoardCell(4,6);
+        if (total == -4 || total == 4) return true;
+        
         return false;
     }
 
