@@ -96,6 +96,7 @@ public class EventLoop {
 
           state.setGameState(Constants.STANDBY);
         } else {
+         System.out.println(Constants.TITLE);  
          state.setGameState(Constants.QUIT_PROGRAM);
         }
       }

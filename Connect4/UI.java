@@ -66,7 +66,29 @@ public class UI
             }
         }
     }
-    
+
+    public int row(int whoseMove, String xName, String oName, State state) {
+        getMoveCol (state.getWhoseMove(), state.getXName(), state.getOName(), state); 
+        int row = 7;
+        int col = 0; 
+        while (true) {
+            System.out.printf(Constants.GET_COL_MOVE, getXOrO(whoseMove), getPlayerName(whoseMove, xName, oName));
+            try {
+                col = scanner.nextInt();
+                while (state.getBoardCell(row,col) != Constants.BLANK) {
+                row --; 
+                }
+                if (state.getBoardCell(row, col) == Constants.BLANK)  {
+                return row;
+                }
+            } catch (InputMismatchException error) {
+                printInvalidRowOrColumn();
+                System.out.println();
+                scanner.nextLine();
+                }
+        }
+    }
+
     public boolean startNewGame() {
         System.out.println(Constants.START_NEW_GAME);
         String yesOrNo = scanner.next();

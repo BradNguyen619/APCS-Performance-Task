@@ -46,13 +46,6 @@ public class State
             total = getBoardCell(3, col) + getBoardCell(4,col) + getBoardCell(5, col) + getBoardCell(6,col);
             if (total == -4 || total == 4) return true;
         }
-        for (int col=0; col<Constants.BOARD_SIZE;) {
-            for (int row=0; col<Constants.BOARD_SIZE;) {
-                while (row<=Constants.BOARD_SIZE && col<=Constants.BOARD_SIZE) {
-                    
-                }
-            }
-        }
         total = getBoardCell(0, 0) + getBoardCell(1,1) + getBoardCell(2,2) + getBoardCell(3,3);
         if (total == -4 || total == 4) return true;
         total = getBoardCell(1, 1) + getBoardCell(2,2) + getBoardCell(3,3) + getBoardCell(4,4);
@@ -70,8 +63,7 @@ public class State
         total = getBoardCell(0, 2) + getBoardCell(1,3) + getBoardCell(2,4) + getBoardCell(3,5);
         if (total == -4 || total == 4) return true;
         total = getBoardCell(1, 3) + getBoardCell(2,4) + getBoardCell(3,5) + getBoardCell(4,6);
-        if (total == -4 || total == 4) return true;
-        
+        if (total == -4 || total == 4) return true;       
         return false;
     }
 
