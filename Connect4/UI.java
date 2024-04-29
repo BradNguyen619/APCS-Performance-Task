@@ -1,5 +1,6 @@
 
 //Code started off as a TicTacToe game from my teacher
+//Changed getMoveCol, removed getMoveRow, edited how the board is printer 
 package Connect4;
 import java.util.Scanner;
 import java.util.InputMismatchException;

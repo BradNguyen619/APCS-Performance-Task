@@ -1,5 +1,6 @@
 
 //Code started off as a TicTacToe game from my teacher
+//Removed uneeded constants/added needed constants, changed existing constants to fit needs of the project
 package Connect4;
 
 /**

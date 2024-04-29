@@ -1,4 +1,5 @@
 //Code started off as a TicTacToe game from my teacher
+//Changed isWinner to fit new board 
 package Connect4;
 /**
  * Tic-Tac-Toe state variables.

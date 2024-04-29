@@ -1,4 +1,5 @@
 //Code started off as a TicTacToe game from my teacher
+//Changed board reset, GET_X_MOVE and GET_O_MOVE
 package Connect4;
 
 public class EventLoop {
